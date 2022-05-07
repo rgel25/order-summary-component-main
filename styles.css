@@ -1,0 +1,162 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap");
+/* Root */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  height: calc(100vh - 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pale-blue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.card {
+  background-color: var(--very-pale-blue);
+  margin: 1rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.3em;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-top: 2rem;
+}
+
+.card-subtitle {
+  font-size: 1em;
+  margin: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+}
+
+.card-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.price-logo {
+  margin-right: 1rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.price {
+  color: var(--desaturated-blue);
+}
+
+.card-select {
+  margin-right: 1rem;
+  font-size: 0.9em;
+  text-decoration: underline;
+  color: hsl(228, 45%, 44%);
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  text-align: center;
+}
+
+.btn {
+  margin: 1rem 0 1rem 0;
+  background-color: var(--bright-blue);
+  padding: 1rem;
+  color: var(--very-pale-blue);
+  box-shadow: 5px 5px 3px var(--pale-blue);
+  border-radius: 0.625rem;
+}
+
+.cancel {
+  color: var(--desaturated-blue);
+  font-size: 0.9em;
+  margin: 1rem;
+}
+
+/* ACTIVE STATES */
+
+.card-select:hover {
+  cursor: pointer;
+  color: var(--bright-blue);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(118, 108, 241, 255);
+  color: var(--pale-blue);
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: var(--bright-blue);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 500px) {
+  .card {
+    width: 350px;
+  }
+
+  .main {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
